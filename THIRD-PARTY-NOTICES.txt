@@ -1,0 +1,64 @@
+THIRD-PARTY NOTICES — AI Desktop Companion
+Inventory date: 2026-10-10
+
+SCOPE
+This notice accompanies a source snapshot. The original application code is MIT-licensed under the root LICENSE with the copyright holder's approval. Third-party materials are not relicensed by that approval. Third-party code, data, model assets, and services keep their own terms; including a dependency in this inventory does not transfer its ownership or grant service access.
+
+The source snapshot does not ship node_modules, Cargo registry sources, native package-manager tools, .NET/Python runtimes, base model downloads, or the separately installed WebView2 Runtime. Required LAYA adapter assets retain the license and NOTICE under tools/laya/adapters; their model/runtime review is separate from this native/web inventory.
+
+The companion third-party-inventory.json lists all 138 npm lock entries and 474 third-party Cargo lock entries. Exact installed npm metadata was available for 78 packages. The Windows x64 MSVC Cargo resolve contains 318 third-party crates: 262 normal-dependency candidates and 56 host/build-only candidates. The application itself is excluded from those counts. All 318 cached crate archives matched Cargo.lock SHA-256 checksums. GTK/Linux libraries are not in this Windows resolve. One non-Windows crate, ndk-context 0.1.1, lacked local metadata; it is not part of the Windows set.
+
+This is a conservative resolved-dependency inventory, not a final executable linked-object manifest. No final Windows executable was produced for this review. A later binary publisher must reconcile its actual payload, generated code, Rust standard library, native libraries, imported/runtime components, and any installer with these notices. A dependency used only while building is not automatically shipped inside the executable.
+
+ACTUAL LICENSE TEXTS AND PROVENANCE
+THIRD-PARTY-LICENSES.txt contains exact upstream legal texts grouped by their SHA-256, including all relevant license files obtained for the 318 Windows crates, the 78 installed npm packages where supplied, Microsoft SDK notices, and Rust standard-library attribution. The JSON inventory identifies each component, version, source URL, source/lock checksum where available, original license path, text SHA-256, and text section. Public upstream author names in legal notices are retained attribution, not project ownership claims.
+
+Where an explicit OR expression offers MIT, MIT is the preferred permissive alternative; the original alternative texts are preserved. AND expressions remain cumulative. Legacy slash expressions are retained verbatim and do not erase per-file notices. No LGPL alternative is selected where MIT or Apache alternatives exist. Mixed-license components include ring (Apache/ISC and embedded BoringSSL, once_cell, and fiat notices), brotli (BSD and MIT), dpi (Apache plus libm MIT), Unicode data, and webpki-roots CDLA-Permissive-2.0. The test-image license in image and the inactive SQLCipher license are excluded from the binary-preparation collection because those resources/features are not selected.
+
+JAVASCRIPT DISTRIBUTION BOUNDARY
+The five direct runtime imports are @tauri-apps/api, i18next, react, react-dom, and react-i18next. Their candidate runtime closure also includes @babel/runtime, html-parse-stringify, scheduler, and use-sync-external-store. Vite can inject a modulepreload runtime helper, so its notice is retained too. This is based on source imports and locked dependencies, not a generated-bundle trace.
+
+TypeScript is a compiler even though this lockfile marks it non-dev. Vite, Babel build tooling, Rollup, esbuild, Prettier, types, native Tauri CLI artifacts, and browser-compatibility data are primarily development tools. caniuse-lite data is CC-BY-4.0; attribution/change requirements apply if the data is redistributed. Merely listing it in a lockfile does not distribute its data. Four installed native tool packages have no standalone top-level license file; the parent tool licenses and declared package metadata are recorded. This collection does not certify redistribution of a complete native CLI/toolchain payload.
+
+MPL-2.0 CORRESPONDING SOURCE
+The Windows resolve includes cssparser 0.37.0, cssparser-macros 0.7.1, dtoa-short 0.3.5, option-ext 0.2.0, and selectors 0.38.0. cssparser-macros is a host procedural macro; the other four are normal-dependency candidates. The project does not patch or vendor these packages. Each exact source archive was downloaded during this review and matched its lockfile checksum. The source retains its upstream MPL notices; the complete MPL-2.0 text is in the license collection.
+
+If an executable distributes covered MPL code, its recipients must receive reasonable, timely access to the corresponding covered source and be told how to obtain it. Covered-file modifications must remain available under MPL; the larger application can use its own license. Preserve these source references and keep equivalent source access available for the binary being distributed:
+cssparser 0.37.0
+  https://crates.io/api/v1/crates/cssparser/0.37.0/download
+  SHA-256 8c9cdaae01d5ed7882b04d795e7f752f46ff52d2fa3b50a20d28c464510bba98
+cssparser-macros 0.7.1
+  https://crates.io/api/v1/crates/cssparser-macros/0.7.1/download
+  SHA-256 d045de693cb712d0b22c6a64be5b953f67b3ce00ab5ad3dd5d8b441886ab8e1a
+dtoa-short 0.3.5
+  https://crates.io/api/v1/crates/dtoa-short/0.3.5/download
+  SHA-256 cd1511a7b6a56299bd043a9c167a6d2bfb37bf84a6dfceaba651168adfb43c87
+option-ext 0.2.0
+  https://crates.io/api/v1/crates/option-ext/0.2.0/download
+  SHA-256 04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d
+selectors 0.38.0
+  https://crates.io/api/v1/crates/selectors/0.38.0/download
+  SHA-256 8adfa1c298912827b8a28b223b3b874357397ae706e6190acd9bf28cee99114d
+
+MICROSOFT WEBVIEW2 AND NATIVE RUNTIME
+The x64 WebView2LoaderStatic.lib in webview2-com-sys 0.39.1 exactly matches Microsoft.Web.WebView2 SDK 1.0.3800.47 (loader SHA-256 89c6b872783b8f6c3cedbff618adb42082d455c615453ae10cfc753f1e8f25d8). The exact SDK package LICENSE.txt and NOTICE.txt are included without modification. The SDK license permits source/binary redistribution subject to its copyright, conditions, disclaimer, and non-endorsement requirements. SDK loader attribution is separate from the MIT Rust wrapper and from the separately installed WebView2 Runtime.
+
+Rust 1.93.0 standard-library notices are included because Cargo.lock does not enumerate the standard library. Its COPYRIGHT-library.html is preserved as text and describes all supported targets and license alternatives; included all-target license references are not evidence that every target component is linked on Windows. The exact final PE and any redistributed MSVC runtime must be checked when a binary becomes available. The optional .NET 10 broker has no NuGet package references; a future self-contained broker package must retain the notices of the exact .NET runtime it redistributes.
+
+REMOTE SERVICES
+OpenAI, Google Gemini, Anthropic-compatible endpoints, and JEV/TypeSafe are remote services, not bundled models or SDK licenses. Users/operators need the applicable provider account, permitted region/use, and current service terms. No API credentials are included or sublicensed with this source. Changing the endpoint can change the applicable terms and data processing.
+
+OpenAI: https://openai.com/policies/services-agreement/
+The agreement permits integration into customer applications and making those applications available to end users, subject to the service agreement and policies. API keys cannot be bought, sold, or transferred; account access cannot be resold. Developers remain responsible for consent and permitted use. Publishing this client does not sublicense the OpenAI service or establish the applicable customer contract.
+
+Google Gemini: https://ai.google.dev/gemini-api/terms
+The API terms and additional terms govern API clients. The additional terms require adults, restrict clients directed at or likely accessed by minors, specify supported regions and paid service for EEA/Switzerland/UK clients, and distinguish paid from unpaid data processing. Unpaid services must not receive sensitive, confidential, or personal information. Users/operators must assess these restrictions before enabling screen, voice, or transcript uploads; the source license grants no Google service rights.
+
+Anthropic: https://www.anthropic.com/legal/commercial-terms
+Commercial terms permit powering customer products subject to policies and supported regions. Customer is responsible for output review and must notify users not to rely on factual assertions without checking them. The terms do not license this project or clear third-party rights in outputs. A generic compatible endpoint is governed by its own operator terms.
+
+JEV / TypeSafe: https://typesafe.ai/legal/mca
+The master customer agreement permits documented API integration into customer applications within an applicable order/term and usage limits. It does not permit distributing the service standalone or sublicensing access credentials. Operators must protect credentials and obtain input rights/consent. Website terms are not a replacement for the applicable API agreement. No customer-specific order or contract was inspected; no JEV service rights are granted by publishing this client.
+
+RELEASE SCOPE
+The actual-text collection resolves the identified Windows dependency notice gaps, including omitted crate license files and the Microsoft loader notices. It is not approval of project ownership, a blanket license to remote services, or proof that a blocked/unbuilt executable has a complete verified binary inventory. Source-only and future binary acceptance are separate decisions.

@@ -1,0 +1,111 @@
+PYTHON / LAYA REDISTRIBUTION NOTICES
+
+Scope and included material
+
+The source snapshot includes the local visual routing adapter at
+tools/laya/adapters/visual-router-head.safetensors (59,086,748 bytes), SHA-256
+202b17303d45c5e9f57923789f560e3d25af9ce6f86e30b2ad7aa12e83aca572.
+Its 31 tensors cover head, type_emb and scorer. Preserve its Apache-2.0 text
+and file-specific modification/attribution NOTICE in tools/laya/adapters.
+The original application license does not replace these model terms.
+
+Base: Convai Innovations LAYA multilingual checkpoint, revision
+1c5edc17a7acd8701df6fc341c0d179f1c62c982. The pinned upstream model card
+expressly declares Apache-2.0 for the weights and credits Convai Innovations:
+https://huggingface.co/convaiinnovations/laya/blob/1c5edc17a7acd8701df6fc341c0d179f1c62c982/README.md
+The pinned upstream repository tree contains no separate LICENSE or NOTICE.
+The full Apache-2.0 text retained alongside the adapter is from LAYA 0.3.6.
+Local contributions and training-material authority were explicitly approved
+by the owner; this records that attestation, not independent title proof.
+Project provenance describes separate synthetic visual-routing training data.
+The corpora are not distributed; Apache-2.0 does not require publishing them.
+
+Separately downloaded components
+
+The 37 Python packages below, CPython, uv, and full LAYA checkpoints/tokenizers
+are optional external downloads and are not bundled in this source snapshot.
+Their terms remain applicable to any future distribution that includes them.
+Preserve existing upstream licenses/attributions, identify modifications, and
+review native component notices and applicable source-access obligations for
+the actual runtime payload. Do not infer that a top-level package license
+settles every dependency or bundled DLL.
+
+Package inventory (pinned versions; see JSON for hashes and exact files)
+
+annotated-doc 0.0.5 — MIT
+anyio 4.15.1 — MIT
+certifi 2026.7.22 — MPL-2.0
+click 8.5.0 — BSD-3-Clause
+colorama 0.4.6 — BSD-3-Clause
+filelock 3.32.3 — MIT
+fsspec 2026.7.0 — BSD-3-Clause
+h11 0.16.0 — MIT
+hf-xet 1.6.0 — Apache-2.0
+httpcore 1.0.9 — BSD-3-Clause
+httpx 0.28.1 — BSD-3-Clause
+huggingface_hub 1.32.0 — Apache-2.0
+idna 3.20 — BSD-3-Clause
+Jinja2 3.1.6 — BSD-3-Clause
+laya 0.3.6 — Apache-2.0
+markdown-it-py 4.2.0 — MIT
+MarkupSafe 3.0.3 — BSD-3-Clause
+mdurl 0.1.2 — MIT
+mpmath 1.3.0 — BSD
+networkx 3.6.1 — BSD-3-Clause
+numpy 2.5.3 — BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0
+packaging 26.3 — Apache-2.0 OR BSD-2-Clause
+psutil 7.2.2 — BSD-3-Clause
+Pygments 2.21.0 — BSD-2-Clause
+PyYAML 6.0.3 — MIT
+regex 2026.9.10 — Apache-2.0 AND CNRI-Python
+rich 15.0.0 — MIT
+safetensors 0.8.0 — Apache-2.0
+setuptools 83.0.0 — MIT
+shellingham 1.5.4 — ISC License
+sympy 1.14.0 — BSD
+tokenizers 0.23.2 — Apache-2.0
+torch 2.14.0+cpu — Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT
+tqdm 4.70.1 — MPL-2.0 AND MIT
+transformers 5.17.0 — Apache 2.0 License
+typer 0.27.2 — MIT
+typing_extensions 4.16.0 — PSF-2.0
+
+Binary-specific conditions and limits
+
+- This inventory records wheel contents and SBOM declarations, not proof that every declared component is linked or that all applicable native notices/source obligations are satisfied.
+- NumPy actual binary LICENSE adds OpenBLAS BSD-3-Clause, LAPACK BSD-3-Clause-Open-MPI, and GCC runtime GPL-3.0-or-later WITH GCC-exception-3.1 beyond the package metadata expression. Preserve the exact bundled license texts and exception; this is not a conclusion that the application becomes GPL-licensed.
+- NumPy includes msvcp140 DLL; torch includes Intel OpenMP and other native DLLs. Component-level entitlement/notice mapping must be checked against the exact runtime payload before redistributing it.
+- hf-xet SBOM contains MPL-2.0 colored 3.1.1 and option-ext 0.2.0; retain required notices and provide their corresponding covered source when conveying an executable form. certifi is MPL-2.0; tqdm includes MPL-2.0 and MIT.
+- hf-xet, safetensors and tokenizers ship Rust-native components; collected top-level licenses and SBOM expressions do not replace all embedded third-party notices. tokenizers wheel has no legal text in its RECORD, so the matching official v0.23.2 Apache text is supplied as a supplement.
+- CPython is external and primarily PSF-2.0. Preserve its complete LICENSE, historical BeOpen/CNRI/CWI notices, incorporated third-party notices, and a summary of changes to Python when applicable. The exact interpreter build and its bundled native libraries need their own redistribution review: https://docs.python.org/3.13/license.html .
+- uv is external, dual-licensed MIT OR Apache-2.0. Retain the selected license and applicable embedded-dependency notices for the exact uv binary: https://github.com/astral-sh/uv/blob/main/LICENSE-MIT and https://github.com/astral-sh/uv/blob/main/LICENSE-APACHE . Neither interpreter nor uv binary is included or fully cleared by this 37-package inventory.
+
+Checkpoint ancestry
+
+Pinned checkpoint configuration identifies jhu-clsp/mmBERT-base (current card:
+MIT) for multilingual and answerdotai/ModernBERT-large (Apache-2.0) for English
+and typed-decisions. Those parent revisions are not identified by that
+configuration. The current mmBERT card describes a Gemma 2 tokenizer; exact
+full-checkpoint/tokenizer redistribution needs a separate ancestry and notice
+review. The included local adapter contains none of the tokenizer or encoder
+tensors. No additional tokenizer restriction is asserted by this audit.
+https://huggingface.co/jhu-clsp/mmBERT-base
+https://huggingface.co/answerdotai/ModernBERT-large
+
+Evidence and limits
+
+All 37 installed versions match the requirement pins. All 36 PyPI wheel hashes
+match the pinned release metadata. All 180 collected installed legal files
+match their RECORD hashes. A matching upstream tokenizers Apache text is
+added as a supplement. PYTHON-LAYA-LICENSES.txt preserves these texts.
+python-laya-inventory.json includes sanitized native SBOM component summaries;
+400 component entries across three wheels are not 400 distinct linked libraries.
+
+The current PyPI version-metadata advisory query returned no entries for the
+36 pinned PyPI versions or the public torch 2.14.0 base version. It is not a
+new pip-audit run and does not fully assess the separately indexed CPU torch
+wheel or embedded native code. No runtime packages were changed.
+
+Apache terms: https://www.apache.org/licenses/LICENSE-2.0
+MPL source obligations: https://www.mozilla.org/en-US/MPL/2.0/
+GCC runtime exception: https://www.gnu.org/licenses/gcc-exception-3.1.html

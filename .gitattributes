@@ -1,3 +1,7 @@
 * text=auto eol=lf
 *.ico -text
 *.safetensors -text
+
+# Preserve exact upstream legal text bytes for recorded SHA-256 provenance.
+/THIRD-PARTY-LICENSES.txt -text
+/PYTHON-LAYA-LICENSES.txt -text

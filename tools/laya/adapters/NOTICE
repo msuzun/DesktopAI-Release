@@ -17,3 +17,10 @@ The base model remains an explicit separate download.
 The accompanying Apache-2.0 license text is copied from the installed pinned
 LAYA 0.3.6 distribution. This notice does not assign a license to unrelated
 DesktopAI application code.
+
+Local adaptation contributions: Copyright (c) 2026 Şevki UZUN.
+The local head, type_emb and scorer adaptations distributed as
+visual-router-head.safetensors are licensed under the Apache License, Version 2.0.
+See LICENSE-APACHE-2.0.txt. Upstream rights and notices remain in force.
+This notice identifies local modifications and does not claim ownership of
+the upstream LAYA implementation, pretrained weights or tokenizer assets.
