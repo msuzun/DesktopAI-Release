@@ -1,0 +1,3 @@
+# Windows x64 CPython 3.13 CPU wheel from the official PyTorch CPU index.
+torch==2.14.0+cpu \
+    --hash=sha256:f2ffdacd95d7090a8bdfa8426f5d1557625874b19a96ba23a41f640d4a0c9c28

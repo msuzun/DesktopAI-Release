@@ -1,0 +1,10 @@
+node_modules
+dist
+src-tauri/target
+src-tauri/gen
+Cargo.lock
+package-lock.json
+**/bin
+**/obj
+.env
+.env.*

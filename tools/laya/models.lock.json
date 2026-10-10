@@ -1,0 +1,115 @@
+{
+  "runtime": "0.3.6",
+  "repository": "convaiinnovations/laya",
+  "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982",
+  "license": "apache-2.0",
+  "visualRouterAdapter": {
+    "version": 1,
+    "file": "visual-router-head.safetensors",
+    "size": 59086748,
+    "sha256": "202b17303d45c5e9f57923789f560e3d25af9ce6f86e30b2ad7aa12e83aca572",
+    "baseRevision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982",
+    "baseModelSha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+    "presentationSha256": "3b90e56f918d1efd383a7ed5ab1e91dd26a7cc433bdf80e8ca19036a06316872",
+    "components": ["head", "type_emb", "scorer"],
+    "revision": "4335ff5105994605d2fd89f9aab6904d6096a0cd"
+  },
+  "checkpoints": {
+    "multilingual": [
+      {
+        "local": "model.safetensors",
+        "remote": "multilingual/model.safetensors",
+        "size": 643835514,
+        "sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+      },
+      {
+        "local": "rl_agent_config.json",
+        "remote": "multilingual/rl_agent_config.json",
+        "size": 472,
+        "gitBlob": "00e35f88bb731bb9126a914666ab1cdac8a204c8"
+      },
+      {
+        "local": "encoder/config.json",
+        "remote": "multilingual/encoder/config.json",
+        "size": 1938,
+        "gitBlob": "0de0e2d30638873790cf962def52e2acf4db3eef"
+      },
+      {
+        "local": "tokenizer/tokenizer.json",
+        "remote": "multilingual/tokenizer/tokenizer.json",
+        "size": 34363188,
+        "sha256": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f"
+      },
+      {
+        "local": "tokenizer/tokenizer_config.json",
+        "remote": "multilingual/tokenizer/tokenizer_config.json",
+        "size": 524,
+        "gitBlob": "c255ac0c8cb34a37d066cd0dafe313fd769d27ae"
+      }
+    ],
+    "english": [
+      {
+        "local": "model.safetensors",
+        "remote": "model.safetensors",
+        "size": 842609210,
+        "sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c"
+      },
+      {
+        "local": "rl_agent_config.json",
+        "remote": "rl_agent_config.json",
+        "size": 745,
+        "gitBlob": "3e4fcbf12cf36164ce18a1398aa9f35f58375ae0"
+      },
+      {
+        "local": "encoder/config.json",
+        "remote": "encoder/config.json",
+        "size": 2083,
+        "gitBlob": "5881ba831f2db5ce0f606bbaa1f2668e1e6cb706"
+      },
+      {
+        "local": "tokenizer/tokenizer.json",
+        "remote": "tokenizer/tokenizer.json",
+        "size": 3583228,
+        "gitBlob": "2f4d8583e507b7466d2490e2d6c045647a822698"
+      },
+      {
+        "local": "tokenizer/tokenizer_config.json",
+        "remote": "tokenizer/tokenizer_config.json",
+        "size": 308,
+        "gitBlob": "9fd800115c5c92353220aa66addfce67a9135f32"
+      }
+    ],
+    "typed-decisions": [
+      {
+        "local": "model.safetensors",
+        "remote": "typed-decisions/model.safetensors",
+        "size": 842609220,
+        "sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e"
+      },
+      {
+        "local": "rl_agent_config.json",
+        "remote": "typed-decisions/rl_agent_config.json",
+        "size": 847,
+        "gitBlob": "5f0e1d5f2366fe8ba2ff330dffaeed53b469e97e"
+      },
+      {
+        "local": "encoder/config.json",
+        "remote": "typed-decisions/encoder/config.json",
+        "size": 2084,
+        "gitBlob": "d4be4829750fb04c0aa8b9897c3ea827f76c0109"
+      },
+      {
+        "local": "tokenizer/tokenizer.json",
+        "remote": "typed-decisions/tokenizer/tokenizer.json",
+        "size": 3583228,
+        "gitBlob": "2f4d8583e507b7466d2490e2d6c045647a822698"
+      },
+      {
+        "local": "tokenizer/tokenizer_config.json",
+        "remote": "typed-decisions/tokenizer/tokenizer_config.json",
+        "size": 337,
+        "gitBlob": "ed1ffabc2ce11120754705709569e365e46da71a"
+      }
+    ]
+  }
+}

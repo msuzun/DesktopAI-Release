@@ -1,0 +1,33 @@
+name: Bug report
+description: Report reproducible behavior with sanitized evidence.
+body:
+  - type: markdown
+    attributes:
+      value: Read the README's known limitations first. Do not include API keys, private transcripts, screenshots, databases, or personal paths.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the first failing command or UI step and sanitized output.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows version, application version or commit, toolchain versions, and provider/model name if relevant. Never include credentials.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed credentials and personal data from this report.
+          required: true

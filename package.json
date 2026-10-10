@@ -1,0 +1,40 @@
+{
+  "name": "ai-desktop-companion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Experimental Windows desktop companion with local visual context, optional memory, and provider-independent conversation",
+  "engines": {
+    "node": "^24.21.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "portable": "powershell -NoProfile -File tools/build-portable.ps1",
+    "check": "tsc --noEmit",
+    "scan:secrets": "node tools/security-scan.mjs",
+    "broker": "dotnet run --project apps/api --launch-profile Development",
+    "tauri": "tauri",
+    "format": "prettier --write . && cargo fmt --manifest-path src-tauri/Cargo.toml",
+    "format:check": "prettier --check . && cargo fmt --manifest-path src-tauri/Cargo.toml -- --check"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "i18next": "^26.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^17.0.15"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "prettier": "^3.0.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.4.0"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}

@@ -1,0 +1,70 @@
+name: Windows verification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verification-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    env:
+      CARGO_TERM_COLOR: never
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        with:
+          dotnet-version: "10.0.400"
+      - name: Install locked frontend dependencies
+        run: npm ci
+      - name: Formatting
+        run: npm run format:check
+      - name: Type checks
+        run: npm run check
+      - name: Frontend production build
+        run: npm run build
+      - name: Security scanner self-check
+        run: npm run scan:secrets -- --self-test
+      - name: Secret scan including reachable history
+        run: npm run scan:secrets -- --history --strict-privacy
+      - name: Frontend dependency advisories
+        run: npm audit --audit-level=moderate
+      - name: Python runtime syntax
+        run: python -m compileall -q tools/laya
+      - name: Optional broker build
+        run: dotnet build apps/api/Companion.Broker.csproj --configuration Release
+      - name: Optional broker formatting
+        run: dotnet format apps/api/Companion.Broker.csproj --verify-no-changes --no-restore
+      - name: Optional broker advisories
+        run: dotnet list apps/api/Companion.Broker.csproj package --vulnerable --include-transitive
+      - name: Native static analysis
+        run: cargo clippy --locked --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
+      - name: Install pinned Rust security auditor
+        run: cargo install cargo-audit --version 0.22.2 --locked
+      - name: Native dependency advisories and maintenance
+        run: cargo audit --file src-tauri/Cargo.lock --deny warnings
+      - name: Windows portable build
+        run: npm run portable
+      # GUI/GPU, installed-model quality, physical audio and live-provider gates
+      # require separate local acceptance. This workflow never publishes a release.
+      # Strict auditing remains blocking while upstream GTK warnings are unresolved.

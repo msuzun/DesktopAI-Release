@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "targets": [
+    {
+      "id": "synthetic_command",
+      "choice": "RUN_SYNTHETIC_COMMAND",
+      "phrases": ["run the synthetic command m11-action-731902"]
+    },
+    {
+      "id": "synthetic_script",
+      "choice": "RUN_SYNTHETIC_SCRIPT",
+      "phrases": ["run the synthetic script m11-action-731902"]
+    },
+    {
+      "id": "notepad",
+      "choice": "LAUNCH_NOTEPAD",
+      "phrases": [
+        "open notepad",
+        "launch notepad",
+        "start notepad",
+        "not defterini aç",
+        "not defteri'ni aç",
+        "notepad aç",
+        "notepad'i aç"
+      ]
+    },
+    {
+      "id": "calculator",
+      "choice": "LAUNCH_CALCULATOR",
+      "phrases": [
+        "open calculator",
+        "launch calculator",
+        "start calculator",
+        "hesap makinesini aç",
+        "hesap makinesi aç"
+      ]
+    },
+    {
+      "id": "command_prompt",
+      "choice": "OPEN_COMMAND_PROMPT",
+      "phrases": [
+        "open terminal",
+        "open cmd",
+        "open command prompt",
+        "launch command prompt",
+        "terminali aç",
+        "terminal aç",
+        "cmd aç",
+        "cmd'yi aç",
+        "komut istemini aç"
+      ]
+    },
+    {
+      "id": "powershell",
+      "choice": "OPEN_POWERSHELL",
+      "phrases": [
+        "open powershell",
+        "launch powershell",
+        "powershell aç",
+        "powershell'i aç"
+      ]
+    },
+    {
+      "id": "visual_studio_code",
+      "choice": "LAUNCH_VISUAL_STUDIO_CODE",
+      "phrases": [
+        "open visual studio code",
+        "open vs code",
+        "launch visual studio code",
+        "visual studio code'u aç",
+        "vs code'u aç",
+        "visual studio code aç"
+      ]
+    },
+    {
+      "id": "visual_studio",
+      "choice": "LAUNCH_VISUAL_STUDIO",
+      "phrases": [
+        "open visual studio",
+        "launch visual studio",
+        "visual studio'yu aç",
+        "visual studio aç"
+      ]
+    }
+  ],
+  "unresolved": [
+    "open it",
+    "launch it",
+    "run it",
+    "run this command",
+    "execute this command",
+    "execute the script",
+    "run the script",
+    "run this script",
+    "run",
+    "onu aç",
+    "aç",
+    "çalıştır",
+    "komutu çalıştır",
+    "bu komutu çalıştır",
+    "bu scripti çalıştır",
+    "scripti çalıştır",
+    "tekrar çalıştır"
+  ]
+}

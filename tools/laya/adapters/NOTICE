@@ -1,0 +1,19 @@
+Local LAYA visual routing adaptation for DesktopAI, M11 Repair A.
+
+Base model: convaiinnovations/laya, multilingual checkpoint
+https://huggingface.co/convaiinnovations/laya
+Pinned upstream revision: 1c5edc17a7acd8701df6fc341c0d179f1c62c982
+Upstream checkpoint metadata declares Apache-2.0.
+
+LAYA runtime and original model implementation:
+https://github.com/NandhaKishorM/laya
+
+Modifications: task-specific adaptation of existing model components on
+separate synthetic visual-routing training data; no model architecture change.
+The selected components and artifact hashes are recorded in models.lock.json.
+The root README records the retained artifact's provenance and beta limitations.
+The base model remains an explicit separate download.
+
+The accompanying Apache-2.0 license text is copied from the installed pinned
+LAYA 0.3.6 distribution. This notice does not assign a license to unrelated
+DesktopAI application code.
