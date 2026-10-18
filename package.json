@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^2.0.0",
-    "i18next": "^26.4.2",
+    "i18next": "^26.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^17.0.15"
